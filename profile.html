@@ -5,6 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Service Provider Profile - HandyOps</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <script>
+    window.onload = () => {
+      const params = new URLSearchParams(window.location.search);
+      const worker = params.get("worker") || "JohnDoe";
+  
+      const defaultImage = "src/default-profile.avif";
+  
+      const data = {
+        JohnSmith: {
+          name: "John Smith",
+          role: "Trusted handyman specializing in general repairs and installations.",
+          rating: "⭐ 4.8 (120 reviews)",
+          image: "src/profile.avif"
+        },
+        EmilyWhite: {
+          name: "Emily White",
+          role: "Detail-oriented cleaner with experience in home and office spaces.",
+          rating: "⭐ 4.6 (95 reviews)",
+          image: "src/profile.avif"
+        },
+        RobertWilson: {
+          name: "Robert Wilson",
+          role: "Expert in appliance repairs with over 8 years of field experience.",
+          rating: "⭐ 4.9 (210 reviews)",
+          image: "src/profile.avif"
+        },
+        EmmaDavis: {
+          name: "Emma Davis",
+          role: "Certified home cleaner and spa therapist with great customer ratings.",
+          rating: "⭐ 4.7 (180 reviews)",
+          image: "src/profile.avif"
+        },
+        DanielMiller: {
+          name: "Daniel Miller",
+          role: "Experienced plumber and electrical technician.",
+          rating: "⭐ 4.5 (88 reviews)",
+          image: "src/profile.avif"
+        },
+        GraceThompson: {
+          name: "Grace Thompson",
+          role: "Professional painter and decorator. Interior & exterior specialist.",
+          rating: "⭐ 4.9 (134 reviews)",
+          image: "src/profile.avif"
+        },
+        JohnDoe: {
+          name: "John Doe",
+          role: "Expert in residential cleaning with 5+ years experience.",
+          rating: "⭐ 4.8 (112 reviews)",
+          image: "src/profile.avif"
+        }
+      };
+  
+      const profile = data[worker] || data["JohnDoe"];
+      const imageElement = document.getElementById("worker-img");
+  
+      // Prevent blinking by checking if image is valid
+      const fallback = () => {
+        imageElement.onerror = null; // Remove the error handler to avoid loop
+        imageElement.src = defaultImage;
+      };
+  
+      imageElement.onerror = fallback;
+      imageElement.src = profile.image || defaultImage;
+      imageElement.alt = profile.name;
+  
+      document.getElementById("worker-name").innerText = profile.name;
+      document.getElementById("worker-role").innerText = profile.role;
+      document.getElementById("worker-rating").innerText = profile.rating;
+    };
+  </script>
+  
+  
+
   <style>
     * {
       margin: 0;
@@ -200,10 +274,10 @@
 
   <main>
     <div class="profile-card">
-      <img src="src/profile.avif" alt="John Doe">
-      <h2>John Doe</h2>
-      <p>Expert in residential cleaning with 5+ years experience.</p>
-      <p>⭐ 4.8 (112 reviews)</p>
+      <img id="worker-img" src="src/profile.avif" alt="Worker">
+      <h2 id="worker-name">Loading...</h2>
+      <p id="worker-role">Loading description...</p>
+      <p id="worker-rating">Loading rating...</p>
       <a href="book.html" class="button">Book Now</a>
     </div>
 
@@ -243,6 +317,5 @@
   <footer>
     © 2025 HandyOps. All rights reserved.
   </footer>
-
 </body>
 </html>
