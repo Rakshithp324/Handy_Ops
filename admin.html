@@ -169,12 +169,39 @@
         display: none;
       }
     }
+    header {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>HomeFix</h1>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="src/handyops-logo.png" alt="HomeFix Logo" class="logo" />
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="contactus.html">contact us</a>
@@ -185,7 +212,7 @@
 
   <main>
     <div class="profile-box">
-      <img src="/sample/src/profile.avif" alt="Customer">
+      <img src="src/profile.avif" alt="Customer">
       <h2>Jane Doe</h2>
       <p>Email: janedoe@email.com</p>
       <p>Phone: +91 98765 43210</p>

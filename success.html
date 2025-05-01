@@ -3,9 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Booking Confirmed - HomeFix</title>
+  <title>Booking Confirmed - HandyOps</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e4f0ff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
     .success-container {
       text-align: center;
       padding: 3rem;
@@ -41,16 +87,30 @@
     .success-container a:hover {
       background-color: #0056b3;
     }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>HomeFix</h1>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="src/handyops-logo.png" alt="HandyOps Logo" class="logo" />
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="contactus.html">contact us</a>
-      <a href="admin.html" >My Profile</a>
-     
+      <a href="contactus.html">Contact Us</a>
+      <a href="admin.html">My Profile</a>
     </nav>
   </header>
 
@@ -62,6 +122,9 @@
     </div>
   </main>
 
-  <footer>© 2025 HomeFix. All rights reserved.</footer>
+  <footer>
+    © 2025 HandyOps. All rights reserved.
+  </footer>
+
 </body>
 </html>

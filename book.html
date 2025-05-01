@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Appointment - HomeFix</title>
+  <title>Book Appointment - HandyOps</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -28,8 +28,17 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    header h1 {
-      font-size: 1.8rem;
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 90px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     nav a {
@@ -138,12 +147,15 @@
 <body>
 
   <header>
-    <h1>HomeFix</h1>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="src/handyops-logo.png" alt="HandyOps Logo" class="logo" />
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="contactus.html">contact us</a>
-      <a href="admin.html" >My Profile</a>
-     
+      <a href="contactus.html">Contact Us</a>
+      <a href="admin.html">My Profile</a>
     </nav>
   </header>
 
@@ -190,7 +202,7 @@
   </main>
 
   <footer>
-    © 2025 HomeFix. All rights reserved.
+    © 2025 HandyOps. All rights reserved.
   </footer>
 
 </body>
